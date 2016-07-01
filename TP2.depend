@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1467324674 source:/home/jcarlos/ProjectsC/TP2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+
+1467222114 source:/home/jcarlos/ProjectsC/TP2/aluno.c
+	<stdio.h>
+	<stdlib.h>
+	"aluno.h"
+
+1467224117 /home/jcarlos/ProjectsC/TP2/aluno.h
+
+1467223933 source:/home/jcarlos/ProjectsC/TP2/arvore.c
+	<stdio.h>
+	<stdlib.h>
+	"arvore.h"
+	"aluno.h"
+
+1467222129 /home/jcarlos/ProjectsC/TP2/arvore.h
+	"aluno.h"
+
+1467340881 source:/home/jcarlos/ProjectsC/TP2/ArvoreBinaria.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+	"Aluno.h"
+
+1467340881 /home/jcarlos/ProjectsC/TP2/ArvoreBinaria.h
+	"Aluno.h"
+
+1467315618 source:/home/jcarlos/ProjectsC/TP2/Aluno.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+
+1467313170 /home/jcarlos/ProjectsC/TP2/Aluno.h
+
+1467315618 source:/home/grad/ccomp/15/josecarlos/Desktop/TP2/Aluno.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+
+1467340880 source:/home/grad/ccomp/15/josecarlos/Desktop/TP2/ArvoreBinaria.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+	"Aluno.h"
+
+1467340880 /home/grad/ccomp/15/josecarlos/Desktop/TP2/ArvoreBinaria.h
+	"Aluno.h"
+
+1467313170 /home/grad/ccomp/15/josecarlos/Desktop/TP2/Aluno.h
+
+1467324674 source:/home/grad/ccomp/15/josecarlos/Desktop/TP2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+
+1467339072 source:/home/grad/ccomp/15/josecarlos/Desktop/TP2/ArvoreSBB.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+	"ArvoreSBB.h"
+
+1467328576 /home/grad/ccomp/15/josecarlos/Desktop/TP2/ArvoreSBB.h
+
+1467339072 source:/home/jcarlos/ProjectsC/TP2/ArvoreSBB.c
+	<stdio.h>
+	<stdlib.h>
+	"Aluno.h"
+	"ArvoreSBB.h"
+
+1467328576 /home/jcarlos/ProjectsC/TP2/ArvoreSBB.h
+
+1467340828 source:/home/jcarlos/ProjectsC/TP2/Hash.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+	"ArvoreSBB.h"
+	"Hash.h"
+
+1467340887 /home/jcarlos/ProjectsC/TP2/Hash.h
+
