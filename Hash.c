@@ -4,6 +4,12 @@
 #include "ArvoreSBB.h"
 #include "Hash.h"
 
+/*-------------------------------------------------------------------
+  Protótipo: Hash *criaHashPadrao()
+  Função: Cria tabela hash com 10 posições e cria árvore em cada uma.
+  Entrada: Nenhuma.
+  Saída: Ponteiro para a estrutura hash.
+  -------------------------------------------------------------------*/
 Hash *criaHashPadrao() {
     Hash *novaHash = malloc(sizeof(Hash));
 
@@ -27,6 +33,12 @@ Hash *criaHashPadrao() {
     return novaHash;
 }
 
+/*---------------------------------------------------
+  Protótipo: Hash *criaHash(int t)
+  Função: Cria tabela hash e cria árvore em cada uma.
+  Entrada: Numero de posições na tabela.
+  Saída: Ponteiro para a estrutura hash.
+  ---------------------------------------------------*/
 Hash *criaHash(int t) {
     Hash *novaHash = malloc(sizeof(Hash));
 
@@ -50,6 +62,12 @@ Hash *criaHash(int t) {
     return novaHash;
 }
 
+/*-------------------------------------
+  Protótipo: void apagaHash(Hash *h)
+  Função: Desaloca hash e suas árvores.
+  Entrada: Ponteiro para o hash.
+  Saída: Nenhuma.
+  -------------------------------------*/
 void apagaHash(Hash *h) {
     int i;
     for (i = 0; i < h->tam; i++) {
@@ -59,12 +77,26 @@ void apagaHash(Hash *h) {
     free(h);
 }
 
+/*-----------------------------------------------------
+  Protótipo: void insereNaHash(Hash *h, Elemento *x)
+  Função: Insere elemento na tabela Hash.
+  Entrada: Ponteiro para hash e ponteiro para elemento.
+  Saída: Nenhuma.
+  -----------------------------------------------------*/
 void insereNaHash(Hash *h, Elemento *x) {
     int c = x->matricula % 10;
     insereElemento(h->hash[c], x);
     insereElementoSBB(&h->hashSBB[c], x);
 }
 
+
+
+/*--------------------------------
+  Protótipo: imprime(Hash *h)
+  Função: Imprime as tabelas hash.
+  Entrada: Ponteiro para hash.
+  Saída: Nenhuma.
+  --------------------------------*/
 void imprime(Hash *h) {
     int i;
     printf("Hash Arvore Binaria.\n");
@@ -86,6 +118,12 @@ void imprime(Hash *h) {
     }
 }
 
+/*---------------------------------------------------
+  Protótipo: int obtemNumElem(Hash *h)
+  Função: Obtem o número de elementos na tabela hash.
+  Entrada: Ponteiro para hash.
+  Saída: Saída número de elemento na tabela.
+  ---------------------------------------------------*/
 int obtemNumElem(Hash *h) {
     return h->nElem;
 }
