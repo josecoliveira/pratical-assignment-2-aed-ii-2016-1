@@ -4,6 +4,15 @@
 #include "ArvoreSBB.h"
 #include "Hash.h"
 
+/*
+  Protótipo: int funcaoHash(Hash *h, Chave c)
+  Função: Converte uma chave para uma posição na tabela hash.
+  Entrada: Ponteiro para tabela hash e chave a ser co
+  */
+int funcaoHash(Hash *h, Chave c) {
+    return c % h->tam;
+}
+
 /*-------------------------------------------------------------------
   Protótipo: Hash *criaHashPadrao()
   Função: Cria tabela hash com 10 posições e cria árvore em cada uma.
@@ -84,12 +93,32 @@ void apagaHash(Hash *h) {
   Saída: Nenhuma.
   -----------------------------------------------------*/
 void insereNaHash(Hash *h, Elemento *x) {
-    int c = x->matricula % 10;
-    insereElemento(h->hash[c], x);
-    insereElementoSBB(&h->hashSBB[c], x);
+    int p = funcaoHash(h, x->matricula);
+    insereElemento(h->hash[p], x);
+    insereElementoSBB(&h->hashSBB[p], x);
 }
 
+/*--------------------------------------------------------------------------------
+  Protótipo: Elemento *obtemDaHash(Hash *h, Chave c)
+  Função: Pesquisa um elemento pela tabela hash com árvore binária.
+  Entrada: Ponteiro para hash e chave pesquisada.
+  Saída: Saída da função pesquisaBinaria que é um ponteiro para o elemento pesquisado.
+  --------------------------------------------------------------------------------*/
+Elemento *obtemDaHash(Hash *h, Chave c) {
+    int p = funcaoHash(h, c);
+    return pesquisaBinaria(h->hash[p], c);
+}
 
+/*--------------------------------------------------------------------------------
+  Protótipo: Elemento *obtemDaHashSBB(Hash *h, Chave c)
+  Função: Pesquisa um elemento pela tabela hash com árvore SBB.
+  Entrada: Ponteiro para hash e chave pesquisada.
+  Saída: Saída da função pesquisaSBB que é um ponteiro para o elemento pesquisado.
+  --------------------------------------------------------------------------------*/
+Elemento *obtemDaHashSBB(Hash *h, Chave c) {
+    int p = funcaoHash(h, c);
+    return pesquisaSBB(h->hashSBB[p], c);
+}
 
 /*--------------------------------
   Protótipo: imprime(Hash *h)

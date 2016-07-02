@@ -20,13 +20,13 @@
 1467222129 /home/jcarlos/ProjectsC/TP2/arvore.h
 	"aluno.h"
 
-1467340881 source:/home/jcarlos/ProjectsC/TP2/ArvoreBinaria.c
+1467340880 source:/home/jcarlos/ProjectsC/TP2/ArvoreBinaria.c
 	<stdio.h>
 	<stdlib.h>
 	"ArvoreBinaria.h"
 	"Aluno.h"
 
-1467340881 /home/jcarlos/ProjectsC/TP2/ArvoreBinaria.h
+1467340880 /home/jcarlos/ProjectsC/TP2/ArvoreBinaria.h
 	"Aluno.h"
 
 1467315618 source:/home/jcarlos/ProjectsC/TP2/Aluno.c

@@ -18,7 +18,7 @@ void apagaHash(Hash *h); //desaloca Hash h
 
 void insereNaHash(Hash *h, Elemento *x); //insere um Elemento na Hash
 
-//Elemento *obtemDaHash(Hash *h, Chave c);  //obtem um Elemento da Hash dada sua chave
+Elemento *obtemDaHash(Hash *h, Chave c);  //obtem um Elemento da Hash dada sua chave
 
 void imprime(Hash *h); //imprime a tabela Hash h
 
